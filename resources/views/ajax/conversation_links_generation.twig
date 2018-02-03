@@ -1,0 +1,9 @@
+{% for user in users %}
+    {% if user.id != auth.user.id %}
+        <li>
+            <a class="newConversation" data-id="{{ user.id }}">
+                {{ user.fullname }}
+            </a>
+        </li>
+    {% endif %}
+{% endfor %}

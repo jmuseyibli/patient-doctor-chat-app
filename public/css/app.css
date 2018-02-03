@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding-top: 90px;
+    font-family: CarlitoRegular, sans-serif;
+}
+
+@media (max-width: 978px) {
+    .container {
+      padding:0;
+      margin:1em;
+    }
+
+    body {
+      padding:0;
+      padding-top: 90px;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom:0;
+    }
+}
+
+

@@ -1,0 +1,44 @@
+{% extends 'layouts/auth.twig' %}
+
+{% block content %}
+    <form class="form-horizontal col-md-4 col-md-offset-4" action="{{ path_for('auth.signup.post') }}" method="post">
+        <fieldset>
+        
+            <legend>Sign Up</legend>
+            
+            <div class="form-group">
+                <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md">
+			    {% if errors.username %}<span class="help-block">{{ errors.username | first }}</span>{% endif %}
+            </div>
+            
+            <div class="form-group">
+                <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
+                {% if errors.email %}<span class="help-block">{{ errors.email | first }}</span>{% endif %}
+            </div>
+            
+            <div class="form-group">
+                <input id="fullname" name="fullname" type="text" placeholder="Fullname" class="form-control input-md">
+                {% if errors.fullname %}<span class="help-block">{{ errors.fullname | first }}</span>{% endif %}
+            </div>
+            
+            <div class="form-group">
+                <select id="role" name="role" class="form-control">
+                  <option value="0">Patient</option>
+                  <option value="1">Doctor</option>
+                </select>
+                {% if errors.role %}<span class="help-block">{{ errors.role | first }}</span>{% endif %}
+            </div>
+            
+            <div class="form-group">
+                <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+                {% if errors.password %}<span class="help-block">{{ errors.password | first }}</span>{% endif %}
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        
+        </fieldset>
+    </form>
+
+{% endblock %}

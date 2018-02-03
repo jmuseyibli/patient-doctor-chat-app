@@ -1,0 +1,27 @@
+{% extends 'layouts/auth.twig' %}
+
+{% block content %}
+    <form class="form-horizontal col-md-4 col-md-offset-4" action="{{ path_for('auth.login.post') }}" method="post">
+        <fieldset>
+        
+            <legend>Giriş</legend>
+            
+            <div class="form-group">
+              <input id="username_or_email" name="identification" type="text" placeholder="İstifadəçi adı və ya Email" class="form-control input-md">
+            </div>
+            
+            <div class="form-group">
+                <input id="password" name="password" type="password" placeholder="Şifrə" class="form-control input-md">
+            </div>
+            
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Daxil ol</button>
+                <hr>
+                <a href="{{ path_for('auth.signup') }}" class="btn btn-default btn-block">Qeydiyyatdan keç</a>
+            </div>
+        
+        </fieldset>
+    </form>
+
+{% endblock %}

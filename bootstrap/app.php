@@ -11,7 +11,7 @@ try {
 
 $app = new Slim\App([
     'settings' => [
-        'displayErrorDetails' => getenv('APP_DEBUG') === 'true',
+        'displayErrorDetails' => getenv('APP_DEBUG'),
         'app' => [
             'name' => getenv('APP_NAME')
         ],
